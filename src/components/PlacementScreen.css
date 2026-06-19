@@ -1,0 +1,80 @@
+/* === Placement Screen === */
+
+.placement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 900px;
+  animation: fadeInUp 0.4s ease;
+}
+
+.placement__header {
+  text-align: center;
+}
+
+.placement__title {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 10px var(--cyan-glow);
+}
+
+.placement__instructions {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  font-family: var(--font-mono);
+}
+
+.placement__layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.placement__dock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 240px;
+}
+
+.placement__board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.placement__random-btn {
+  width: 100%;
+}
+
+.placement__start-btn {
+  margin-top: 8px;
+  font-size: 1rem;
+  padding: 12px 36px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .placement__layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .placement__dock {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .placement__title {
+    font-size: 1.1rem;
+  }
+}

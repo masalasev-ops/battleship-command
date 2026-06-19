@@ -1,0 +1,133 @@
+/* === Game Over Screen === */
+
+.gameover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 40px 20px;
+}
+
+.gameover__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  animation: scaleIn 0.5s ease;
+}
+
+.gameover__title {
+  font-family: var(--font-mono);
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+
+.gameover__title--win {
+  color: var(--gold);
+  text-shadow: 0 0 30px rgba(255, 213, 79, 0.5), 0 0 60px rgba(255, 213, 79, 0.2);
+  animation: scaleIn 0.6s ease;
+}
+
+.gameover__title--lose {
+  color: var(--red);
+  text-shadow: 0 0 30px var(--red-glow), 0 0 60px rgba(255, 61, 87, 0.2);
+}
+
+.gameover__subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  text-align: center;
+  font-family: var(--font-mono);
+}
+
+/* Stats */
+.gameover__stats {
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.gameover__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.gameover__stat-value {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--cyan);
+}
+
+.gameover__stat-value--hit {
+  color: var(--orange);
+}
+
+.gameover__stat-value--miss {
+  color: var(--text-muted);
+}
+
+.gameover__stat-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Actions */
+.gameover__actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Reveal */
+.gameover__reveal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 12px;
+  animation: fadeInUp 0.4s ease;
+}
+
+.gameover__reveal-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.2em;
+}
+
+.gameover__reveal-boards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .gameover__title {
+    font-size: 2rem;
+  }
+
+  .gameover__stats {
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .gameover__stat-value {
+    font-size: 1.2rem;
+  }
+
+  .gameover__reveal-boards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

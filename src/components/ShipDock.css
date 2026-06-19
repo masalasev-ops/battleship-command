@@ -1,0 +1,141 @@
+/* === Ship Dock === */
+
+.ship-dock {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  min-width: 220px;
+  box-shadow: var(--shadow-panel);
+}
+
+.ship-dock--empty {
+  text-align: center;
+  padding: 24px;
+}
+
+.ship-dock__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ship-dock__count {
+  color: var(--cyan);
+}
+
+.ship-dock__ships {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.ship-dock__empty-text {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* Shared rotate button — below the ship list */
+.ship-dock__rotate-btn {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.ship-dock__rotate-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* Ship Card */
+.ship-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.ship-card:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 8px rgba(0, 229, 255, 0.15);
+}
+
+.ship-card--selected {
+  border-color: var(--cyan);
+  background: rgba(0, 229, 255, 0.08);
+  box-shadow: 0 0 12px var(--cyan-glow);
+}
+
+.ship-card--placed {
+  opacity: 0.35;
+  cursor: default;
+  pointer-events: none;
+}
+
+.ship-card__info {
+  display: flex;
+  flex-direction: column;
+  min-width: 70px;
+}
+
+.ship-card__name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ship-card__length {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.ship-card__orient {
+  font-size: 0.7rem;
+  color: var(--cyan);
+  letter-spacing: 0.05em;
+  padding: 1px 5px;
+  background: rgba(0, 229, 255, 0.1);
+  border-radius: 2px;
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.ship-card__visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ship-wireframe {
+  display: block;
+}
+
+.ship-card__placed-badge {
+  color: var(--green);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 4px 8px;
+}
+
+@media (max-width: 768px) {
+  .ship-dock {
+    min-width: auto;
+    width: 100%;
+  }
+}

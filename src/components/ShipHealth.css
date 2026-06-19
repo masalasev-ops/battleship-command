@@ -1,0 +1,90 @@
+/* === Ship Health === */
+
+.ship-health {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  min-width: 200px;
+}
+
+.ship-health__header {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ship-health__bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ship-health__item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ship-health__item--sunk {
+  opacity: 0.5;
+}
+
+.ship-health__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ship-health__name {
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+}
+
+.ship-health__status {
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+.ship-health__item--sunk .ship-health__status {
+  color: var(--red);
+}
+
+.ship-health__bar-track {
+  height: 6px;
+  background: var(--bg-deep);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ship-health__bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ship-teal), var(--cyan));
+  border-radius: 3px;
+  transition: width 0.4s ease;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.ship-health__bar-fill--sunk {
+  background: linear-gradient(90deg, #6B0000, var(--red));
+}
+
+.ship-health__bar-damage {
+  height: 100%;
+  background: var(--red);
+  border-radius: 3px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: width 0.4s ease;
+}

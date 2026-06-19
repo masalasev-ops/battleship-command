@@ -1,0 +1,131 @@
+/* === Landing Screen === */
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  animation: fadeInUp 0.6s ease;
+}
+
+.landing__radar {
+  margin-bottom: 24px;
+}
+
+.landing__radar canvas {
+  width: 220px;
+  height: 220px;
+}
+
+.landing__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  max-width: 480px;
+  width: 100%;
+}
+
+/* Title */
+.landing__title-block {
+  text-align: center;
+  position: relative;
+}
+
+.landing__title {
+  font-family: var(--font-mono);
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.landing__title-accent {
+  color: var(--cyan);
+  text-shadow: 0 0 20px var(--cyan-glow);
+  display: block;
+  font-size: 1.8rem;
+}
+
+.landing__scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--cyan);
+  box-shadow: 0 0 10px var(--cyan);
+  opacity: 0.6;
+  animation: scanning 3s ease-in-out infinite;
+}
+
+@keyframes scanning {
+  0% { top: 0%; opacity: 0; }
+  10% { opacity: 0.8; }
+  50% { opacity: 0.2; }
+  90% { opacity: 0.8; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.landing__subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.3em;
+  margin-top: 8px;
+}
+
+/* Sections */
+.landing__section {
+  width: 100%;
+}
+
+.landing__section-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.2em;
+  margin-bottom: 10px;
+  padding-left: 2px;
+}
+
+.landing__names {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.landing__name-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.landing__name-field label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.landing__start-btn {
+  margin-top: 8px;
+  padding: 14px 48px;
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+}
+
+@media (max-width: 768px) {
+  .landing__title {
+    font-size: 1.6rem;
+  }
+  .landing__title-accent {
+    font-size: 1.2rem;
+  }
+  .landing__radar canvas {
+    width: 160px;
+    height: 160px;
+  }
+}
