@@ -79,26 +79,49 @@
 
 ## 🚀 Quick Start
 
+### Prerequisites
+
+- **Node.js** `>= 18.x` ([download](https://nodejs.org))
+- **npm** `>= 9.x` (ships with Node.js)
+
+### Run Locally
+
 ```bash
-# Clone the repository
+# 1. Clone the repository
 git clone https://github.com/Udayan/battleship-command.git
 cd battleship-command
 
-# Install dependencies
+# 2. Install dependencies
 npm install
 
-# Start the development server
+# 3. Start the development server
 npm run dev
 ```
 
-Open `http://localhost:3000` in your browser.
+Open **http://localhost:3000** in your browser. The game loads instantly — no build step needed.
 
 ### Production Build
 
 ```bash
-npm run build
-npm run preview
+npm run build      # outputs to dist/
+npm run preview    # preview the production build locally
 ```
+
+### How to Play
+
+1. **Landing screen** — select "1 Player vs AI" or "2 Players (Local)", enter your name, choose AI difficulty
+2. **Placement phase** — click a ship in the dock, then click the board to place it. Right-click the board, press `R`, or click the ↻ Rotate button to change orientation. Click 🎲 Random for instant placement
+3. **Battle phase** — click cells on the enemy board (right side) to attack. Hits show as explosions, misses as white circles. Sink all 5 enemy ships to win
+4. **Game over** — view stats and reveal both boards
+
+### Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| No sound on first load | Click anywhere on the page — browsers require a user gesture before playing audio |
+| Sounds stop mid-game | Refresh the page — this is a browser power-saving behavior |
+| Board looks jittery | The canvas auto-adjusts — resize your browser window slightly to reset |
+| `npm install` fails | Try `npm install --legacy-peer-deps` or update Node.js to v18+ |
 
 ---
 
